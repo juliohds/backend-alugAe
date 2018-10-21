@@ -3,82 +3,43 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Imovels;
 
 class ImovelsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function showAll()
     {
-        //
+        $imovel = Imovels::all();
+        return response()->json($user);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function showById($id)
     {
-        //
+        $imovel = Imovels::find($id);
+        return response()->json($imovel);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function create(Request $request)
     {
-        //
+        $imovel = new User();
+        $request->nome;
+        $imovel->fill($request->all());
+        $imovel->save();
+        return response()->json($imovel);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function edit(Request $request, $id)
     {
-        //
+        $imovel = User::find($id);
+        $imovel->fill($request->all());
+        $imovel->update();
+        return response()->json($imovel);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function delete($id)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $imovel = User::find($id);
+        $imovel->delete();
+        return response()->json($imovel);
     }
 }
