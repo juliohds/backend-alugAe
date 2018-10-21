@@ -15,6 +15,14 @@ class CreatePerfilsTable extends Migration
     {
         Schema::create('perfils', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('idade');
+            $table->string('time');
+            $table->string('partido');
+            $table->string('series');
+            $table->double('score');
+            $table->string('amigos');
+            $table->boolean('baladeiro');
+            $table->boolean('casseiro');
             $table->timestamps();
         });
     }
