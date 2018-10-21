@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return view('welcome'); });
+
+//CRUD USER
+Route::post('/user', 'userController@create');
+Route::get('/user/{id}', 'userController@show');
+Route::put('/user/{id}', 'userController@update');
+Route::delete('/user/{id}', 'userController@delete');
+
