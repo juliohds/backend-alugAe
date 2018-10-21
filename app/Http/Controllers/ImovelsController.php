@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Imovels;
+use App\Imovel;
 
 class ImovelsController extends Controller
 {
     public function showAll()
     {
-        $imovel = Imovels::all();
-        return response()->json($user);
+        $imovel = Imovel::all();
+        return response()->json($imovel);
     }
 
     public function showById($id)
     {
-        $imovel = Imovels::find($id);
+        $imovel = Imovel::find($id);
         return response()->json($imovel);
     }
 
