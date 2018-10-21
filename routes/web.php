@@ -35,22 +35,22 @@ Route::put('/endereco/{id}', 'EnderecoController@update');
 Route::delete('/endereco/{id}', 'EnderecoController@delete');
 
 //Chat
-Route::get('/chat', 'EnderecoController@showAll');
-Route::get('/chat/{id}', 'EnderecoController@showById');
-Route::post('/chat', 'EnderecoController@create');
-Route::put('/chat/{id}', 'EnderecoController@update');
-Route::delete('/chat/{id}', 'EnderecoController@delete');
+Route::get('/chat', 'ChatController@showAll');
+Route::get('/chat/{id}', 'ChatController@showById');
+Route::post('/chat', 'ChatController@create');
+Route::put('/chat/{id}', 'ChatController@update');
+Route::delete('/chat/{id}', 'ChatController@delete');
 
 //Locacoes
-Route::get('/locacoes', 'EnderecoController@showAll');
-Route::get('/locacoes/{id}', 'EnderecoController@showById');
-Route::post('/locacoes', 'EnderecoController@create');
-Route::put('/locacoes/{id}', 'EnderecoController@update');
-Route::delete('/locacoes/{id}', 'EnderecoController@delete');
+Route::get('/locacoes', 'LocacoesController@showAll');
+Route::get('/locacoes/{id}', 'LocacoesController@showById');
+Route::post('/locacoes', 'LocacoesController@create');
+Route::put('/locacoes/{id}', 'LocacoesController@update');
+Route::delete('/locacoes/{id}', 'LocacoesController@delete');
 
 //Perfil
-Route::get('/perfil', 'EnderecoController@showAll');
-Route::get('/perfil/{id}', 'EnderecoController@showById');
-Route::post('/perfil', 'EnderecoController@create');
-Route::put('/perfil/{id}', 'EnderecoController@update');
-Route::delete('/perfil/{id}', 'EnderecoController@delete');
+Route::get('/perfil', 'PerfilController@showAll');
+Route::get('/perfil/{id}', 'PerfilController@showById');
+Route::post('/perfil', 'PerfilController@create');
+Route::put('/perfil/{id}', 'PerfilController@update');
+Route::delete('/perfil/{id}', 'PerfilController@delete');
