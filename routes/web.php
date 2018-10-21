@@ -16,4 +16,7 @@ Route::get('/', function () { return view('welcome'); });
 //CRUD USER
 Route::get('/user', 'UserController@showAll');
 Route::get('/user/{id}', 'UserController@showById');
+Route::post('/user', 'UserController@create');
+Route::put('/user/{id}', 'UserController@update');
+Route::delete('/user/{id}', 'UserController@delete');
 
