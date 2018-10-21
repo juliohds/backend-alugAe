@@ -20,6 +20,8 @@ Route::post('/user', 'UserController@create');
 Route::put('/user/{id}', 'UserController@update');
 Route::delete('/user/{id}', 'UserController@delete');
 
+Route::post('/match-user', 'UserController@match');
+
 //Imovels
 Route::get('/imovel', 'ImovelsController@showAll');
 Route::get('/imovel/{id}', 'ImovelsController@showById');

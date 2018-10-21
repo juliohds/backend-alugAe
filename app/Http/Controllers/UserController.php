@@ -13,6 +13,11 @@ class UserController extends Controller
         return response()->json($user);
     }
 
+    public function match(){
+        $user = User::find();
+        return response()->json($user);
+    }
+
     public function showById($id)
     {
         $user = User::find($id);
