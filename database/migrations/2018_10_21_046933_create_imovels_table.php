@@ -17,7 +17,7 @@ class CreateImovelsTable extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->integer('endereco_id')->nullable();
-            $table->foreign('endereco_id')->references('id')->on('enderecos');
+            //$table->foreign('endereco_id')->references('id')->on('enderecos');
             $table->string('img');
             $table->double('preco');
             $table->timestamps();
