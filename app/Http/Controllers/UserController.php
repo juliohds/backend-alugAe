@@ -28,7 +28,7 @@ class UserController extends Controller
         return response()->json($user);
     }
 
-    public function edit($id)
+    public function update($id)
     {
         $user = User::find($id);
         $user->fill($this->input());

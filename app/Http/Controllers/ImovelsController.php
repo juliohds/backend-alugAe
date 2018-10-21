@@ -21,16 +21,16 @@ class ImovelsController extends Controller
 
     public function create(Request $request)
     {
-        $imovel = new User();
+        $imovel = new Imovel();
         $request->nome;
         $imovel->fill($request->all());
         $imovel->save();
         return response()->json($imovel);
     }
 
-    public function edit(Request $request, $id)
+    public function update(Request $request, $id)
     {
-        $imovel = User::find($id);
+        $imovel = Imovel::find($id);
         $imovel->fill($request->all());
         $imovel->update();
         return response()->json($imovel);
@@ -38,7 +38,7 @@ class ImovelsController extends Controller
 
     public function delete($id)
     {
-        $imovel = User::find($id);
+        $imovel = Imovel::find($id);
         $imovel->delete();
         return response()->json($imovel);
     }
