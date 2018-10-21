@@ -56,3 +56,6 @@ Route::get('/perfil/{id}', 'PerfilController@showById');
 Route::post('/perfil', 'PerfilController@create');
 Route::put('/perfil/{id}', 'PerfilController@update');
 Route::delete('/perfil/{id}', 'PerfilController@delete');
+
+//Crawler
+Route::get('/show-info-crawler', 'CrawlerUser@showInfoCrawler');
