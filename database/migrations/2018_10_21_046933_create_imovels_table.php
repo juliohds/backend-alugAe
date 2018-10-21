@@ -16,7 +16,7 @@ class CreateImovelsTable extends Migration
         Schema::create('imovels', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->integer('endereco_id');
+            $table->integer('endereco_id')->nullable();
             $table->foreign('endereco_id')->references('id')->on('enderecos');
             $table->string('img');
             $table->double('preco');
